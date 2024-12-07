@@ -1,0 +1,155 @@
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+html,
+body {
+  margin: 0;
+}
+
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+/*
+6. Improve media defaults
+*/
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+7. Remove built-in form typography styles
+*/
+button {
+  font: inherit;
+}
+/*
+8. Avoid text overflows
+*/
+p,
+h2 {
+  overflow-wrap: break-word;
+}
+
+/* main css  */
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  display: grid;
+  place-content: center;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin: 5em 0;
+}
+
+main {
+  max-width: 330px;
+  width: 100%;
+}
+
+/* boxes */
+
+.orange {
+  background-color: hsl(31, 77%, 52%);
+  padding: 3em;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.cyan {
+  background-color: hsl(184, 100%, 22%);
+  padding: 3em;
+}
+.green {
+  background-color: hsl(179, 100%, 13%);
+  padding: 3em;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.title {
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin: 1.8rem 0;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+}
+
+/* button */
+
+.button {
+  background-color: hsl(0, 0%, 95%);
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.8rem 2.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: transparent;
+  color: inherit;
+  border: 0.15rem solid hsl(0, 0%, 95%);
+  padding: 0.65rem 2.05rem;
+}
+
+.orange1 {
+  color: hsl(31, 77%, 52%);
+}
+.cyan1 {
+  color: hsl(184, 100%, 22%);
+}
+.green1 {
+  color: hsl(179, 100%, 13%);
+}
+
+/* todo the height property on the css reset was messing with my code */
+
+/* media query */
+
+@media only screen and (min-width: 700px) {
+  body {
+    margin: 0;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 920px;
+  }
+  p {
+    margin-bottom: 5.93em;
+  }
+  .orange {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .green {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+}
